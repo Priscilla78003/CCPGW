@@ -1,0 +1,8 @@
+2022-01-24 20:41:28 INFO  MicroServiceHandler:190 -POST request did not work.
+2022-01-24 20:42:38 INFO  MicroServiceHandler:134 -Duration: 71
+2022-01-24 20:42:38 INFO  MicroServiceHandler:190 -POST request did not work.
+2022-01-24 20:42:51 INFO  MicroServiceHandler:134 -Duration: 84
+2022-01-24 20:42:51 INFO  MicroServiceHandler:190 -POST request did not work.
+2022-01-24 20:42:56 INFO  MicroServiceHandler:134 -Duration: 89
+2022-01-24 20:42:56 INFO  MicroServiceHandler:190 -POST request did not work.
+2022-01-24 20:47:27 INFO  MicroServiceHandler:190 -POST request did not work.

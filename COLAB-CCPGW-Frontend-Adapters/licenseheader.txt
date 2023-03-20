@@ -1,0 +1,15 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}***************************************************************
+${licensePrefix}Truteq Internet Payment Gateway (IPGW) version 1.0.0
+${licensePrefix}***************************************************************
+${licensePrefix}Copyright (c) ${date?date?string("yyyy")} Truteq Australia 2019
+${licensePrefix}***************************************************************
+${licensePrefix}IPGW Front end Adapter: SABRE - Microservice for IPGW - SABRE 
+${licensePrefix}Support: Grant O'Reilly gbo@truteq.com
+${licensePrefix}V01.00.00  20-Nov-2020 
+${licensePrefix}***************************************************************
+<#if licenseLast??>
+${licenseLast}
+</#if> 

@@ -1,0 +1,3 @@
+2021-02-18 15:12:33 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"Session for CIF: 3273620 has been removeded."}
+2021-02-18 15:12:33 INFO  MicroServiceHandler:188 -Response:{"status":600,"comments":"Error!","data":"No matching session active."}
+2021-02-18 15:12:33 INFO  MicroServiceHandler:188 -Response:{"status":600,"comments":"Error!","data":"No matching session active."}

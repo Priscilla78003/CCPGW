@@ -1,0 +1,63 @@
+#This is the external applicaiton properties file.
+
+server.port = 9091
+
+ipgw.frontend.apdapter.url.sabre=https://ccpgw.testbsp.com.pg:9091/sabre/
+ipgw.frontend.apdapter.sabre.xsd.schema=SupplierPaymentServices_v2.6.xsd
+
+#non3ds-approve non3ds-decline
+ipgw.frontend.apdapter.authrs=non3ds-approve
+
+# Transaction Manager Database Controller
+transaction.manager.db.write.originaldata=https://ccpgw.testbsp.com.pg:9078/transaction/manager/database/write/originaldata
+transaction.manager.db.read.originaldata=https://ccpgw.testbsp.com.pg:9078/transaction/manager/database/read/originaldata
+transaction.manager.db.write.authorisation=https://ccpgw.testbsp.com.pg:9078/transaction/manager/database/write/authorisation
+transaction.manager.db.read.authorisation=https://ccpgw.testbsp.com.pg:9078/transaction/manager/database/read/authorisation
+transaction.manager.db.write.capture=https://ccpgw.testbsp.com.pg:9078/transaction/manager/database/write/captured
+transaction.manager.db.read.capture=https://ccpgw.testbsp.com.pg:9078/transaction/manager/database/read/captured
+transaction.manager.db.read.merchantcurrencymap=https://ccpgw.testbsp.com.pg:9078/transaction/manager/database/read/merchantId
+transaction.manager.db.read.acspareq=https://ccpgw.testbsp.com.pg:9078/transaction/manager/database/write/acspareq
+
+# Transaction Manager 3DS controller
+transaction.manager.3ds.v1.createpareq=https://ccpgw.testbsp.com.pg:9078/transaction/manager/3ds/v1/service/createPaReqIfEnrolled
+transaction.manager.3ds.v1.validatepares=https://ccpgw.testbsp.com.pg:9078/transaction/manager/3ds/v1/service/validatePaRes
+transaction.manager.3ds.v1.acsurl=https://ccpgw.testbsp.com.pg/transaction/acs/servlet/main
+transaction.manager.3ds.v1.useservlet.proxy=false
+
+#Postilion restful service
+postilion.restful.service.authorise=https://ccpgw.testbsp.com.pg:9077/postilion/restful/service/comms/server/postilion/authorise
+postilion.restful.service.refund=https://ccpgw.testbsp.com.pg:9077/postilion/restful/service/comms/server/postilion/refund
+postilion.restful.service.capture=https://ccpgw.testbsp.com.pg:9077/postilion/restful/service/comms/server/postilion/capture
+postilion.restful.service.reversal=https://ccpgw.testbsp.com.pg:9077/postilion/restful/service/comms/server/postilion/reversal
+
+#Merchant config
+merchant.config.merchantId=4001PGK00000011
+merchant.config.cardAcceptorNameLocation=AIR NIUGINI PGK        POM            PG
+merchant.config.terminalId=401PGK11
+merchant.config.acquiringInstitutionCode.postilion=60130200000
+merchant.config.acquiringInstitutionCode.visa=428280
+merchant.config.acquiringInstitutionCode.mastercard=533181
+merchant.config.posDataCode=660550600001192
+merchant.config.categoryCode=4511
+merchant.config.currencyCode=598
+merchant.config.countryCode=598
+merchant.config.merchantCode=merId
+merchant.config.merchantType=4511
+
+soap.ws.user.name=mJCe6Moyg3z+zBtSbi4+BSC5tnCvRkTJZNhPA4zqQSk=
+soap.ws.password=5AoAMJwFe0xT6LE6et/weQOZfftlCbt9sE/3AdiFruU=
+soap.ws.role=IplKrKwDFoLs8k5O00Znmg==
+
+communicator.user.name=oy8JRKqtFvKeBfPoYdRVJSZVFFRQLLMnJZai2UACYLo=
+communicator.password=bHuAWRdSKYVEDu0UWAOEKAJO4bUD+pkcAs5gaBx433PYImoPGazHO/9GhZWh3VUz
+communicator.secret=adm1nttpp
+
+file.name=/home/grant/Truteq-Doc/IPGW/SabreAdapter/CERTSAMPLEXACCBMANY.TXT
+
+header.key.3dsorgid=3DS-Organization-ID
+header.value.3dsorgid=a93e6455-3ffc-498d-9d64-84fa22dc7095
+
+transaction.manager.certificate=/config/keystore/platformpacKS.p12
+transaction.manager.platformpac.keystore.password=1UhfTWQFcy0sitoOIveklw==
+
+debug=false

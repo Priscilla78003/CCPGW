@@ -1,0 +1,41 @@
+sh startMariaDB.sh
+
+docker exec -e MYSQL_ROOT_PASSWORD=ccpgwtr4ns4ctdb4dm1n -it ccpgwtransactdb bash
+
+root@998edbe8506d:/# mysql -u root -p
+Enter password: ccpgwtr4ns4ctdb4dm1n
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 10.6.3-MariaDB-1:10.6.3+maria~focal mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| aipunterdb         |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.001 sec)
+
+MariaDB [(none)]> 
+
+
+CREATE OR REPLACE USER 'aipunteruser'@'%' IDENTIFIED BY '41punt3ru53r';
+
+GRANT ALL ON aipunterdb.* TO 'aipunteruser'@'%' IDENTIFIED BY '41punt3ru53r';
+GRANT ALL ON aipunterdb.* TO 'aipunteruser'@'localhost' IDENTIFIED BY '41punt3ru53r';
+
+select * from mysql.user;
+
+GRANT ALL PRIVILEGES ON *.* TO 'aipunteruser'@'%' IDENTIFIED BY '41punt3ru53r';
+
+FLUSH PRIVILEGES;
+
+

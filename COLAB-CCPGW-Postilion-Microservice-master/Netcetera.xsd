@@ -1,0 +1,635 @@
+<xs:schema xmlns:mpi-common="http://mpi.netcetera.com/common" xmlns:mpi="http://mpi.netcetera.com" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified" attributeFormDefault="unqualified" targetNamespace="http://mpi.netcetera.com">
+  <xs:import schemaLocation="mpi-common.xsd" namespace="http://mpi.netcetera.com/common" />
+  <xs:import schemaLocation="ThreeDSecure.xsd" />
+  <xs:annotation>
+    <xs:documentation>
+      <![CDATA[
+      MPI API Naming convention: 
+       
+      * All names of element with complex type are starting with an upper case letter (in line with 3-D Secure protocol messages)
+ 
+      * All names of element with simple type are starting with a lower case letter (in line with 3-D Secure protocol messages)
+       
+      * All attribute names start with a lower case letter (in line with 3-D Secure protocol messages)
+       
+      * Elements containing 3-D Secure protocol messages are pre-fixed with "ThreeDSecure" 
+        and post-fixed with the message they contain. (e.g. ThreeDSecurePAReq for a PAReq message)
+         
+      * Elements passed between the Merchant and the ACS via the cardholder browser 
+        use names as specified by the 3-D Secure protocol documentation. (PaRes, PaReq)
+       
+        ]]>
+    </xs:documentation>
+  </xs:annotation>
+  <xs:element name="PaReqCreationRequest">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Root element of the PaReq creation request.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          <![CDATA[
+            The PaReqCreationRequest passed to MPI for the createPaReqIfEnrolled call.
+          ]]>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="Cardholder" type="mpi:Cardholder" minOccurs="0" />
+        <xs:element name="Purchase" type="mpi:Purchase" minOccurs="0" />
+        <xs:element name="Merchant" type="mpi:Merchant" minOccurs="0" />
+        <xs:element name="Browser" type="mpi:Browser" minOccurs="0" />
+        <xs:element name="Extension" type="xs:anyType" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="PaReqCreationResponse">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Root element of the PaReq creation response.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          <![CDATA[
+            The response returned from the createPaReqIfEnrolled call.
+          ]]>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="sessionId" type="mpi:SessionId" minOccurs="1" />
+        <xs:element name="SessionData" type="mpi:SessionData" minOccurs="0" />
+        <xs:element name="PaReq" type="xs:string" minOccurs="0" />
+        <xs:element name="ThreeDSecureVEReq" type="ThreeDSecureType" minOccurs="0" />
+        <xs:element name="ThreeDSecureVERes" type="ThreeDSecureType" minOccurs="0" />
+        <xs:element name="Error" type="mpi-common:ErrorDetails" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="PaResValidationRequest">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Root element of the PaRes validation request.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          <![CDATA[
+            The PaResValidationRequest passed to MPI for the validatePaRes call.
+          ]]>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="PaRes" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                The deflated and base64 encoded PARes, as returned from the ACS.
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="SessionData" type="mpi:SessionData" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="PaResValidationResponse">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Root element of the PaRes validation response.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          <![CDATA[
+            The PaResValidationResponse returned to the Merchant after Payer Authentication Process.
+          ]]>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="sessionId" type="mpi:SessionId" minOccurs="1" />
+        <xs:element name="cavv" type="xs:string" minOccurs="0" >
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                Cardholder authentication verification value. It is a 28 byte value (Base64 encoded 20 byte cavv).
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="cavvHex" type="xs:string" minOccurs="0" >
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                Cardholder authentication verification value. It is a hexadecimal encoded cavv.
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="eci" type="xs:string" minOccurs="0" />
+        <xs:element name="transactionStatus" type="xs:string" minOccurs="0" />
+        <xs:element name="xid" type="xs:string" minOccurs="0" >
+          <xs:annotation>
+              <xs:documentation>
+              <![CDATA[
+                Transaction identifier. It is a 28 byte value (Base64 encoded 20 byte xid).
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="xidHex" type="xs:string" minOccurs="0" >
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                Transaction identifier. It is a hexadecimal encoded xid.
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ThreeDSecurePARes" type="ThreeDSecureType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="Error" type="mpi-common:ErrorDetails" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+   
+  <xs:complexType name="SessionData">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[ 
+          Element containing all the session data, needed by the MPI when the session is disabled.
+          It is used in the validation of PARes. 
+        ]]>     
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ThreeDSecurePAReq" type="ThreeDSecureType" minOccurs="0"> 
+        <xs:annotation>
+          <xs:documentation>
+           <![CDATA[ 
+              Use the same value returned by the MPI in the PaReqCreationResponse.
+            ]]>         
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>    
+      <xs:element name="paReqCreationTime" type="mpi:DateTime" minOccurs="0" >
+        <xs:annotation>
+          <xs:documentation>
+           <![CDATA[ 
+              Use the same value returned by the MPI in the PaReqCreationResponse.
+            ]]>         
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>    
+      <xs:element name="pan" type="xs:string" minOccurs="0" >
+        <xs:annotation>
+          <xs:documentation>
+           <![CDATA[ 
+              The last 4 digits of the actual pan as used in PaReqCreationRequest, padded with zeroes from left.
+            ]]>         
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="scheme" type="mpi:SchemeId" minOccurs="0" >
+        <xs:annotation>
+          <xs:documentation>
+           <![CDATA[ 
+              The actual schemeId as used in PaReqCreationRequest.
+            ]]>         
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="acsUrl" type="xs:string" minOccurs="0" >
+        <xs:annotation>
+          <xs:documentation>
+           <![CDATA[ 
+              The ACS URL from the PaReqCreationResponse.
+            ]]>         
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="masterCardTokenized" type="xs:string" minOccurs="0" >
+        <xs:annotation>
+          <xs:documentation>
+            Use the same value returned by the MPI in the PaReqCreationResponse.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="Cardholder">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          The element containing cardholder related data.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="pan" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              The cardholder pan.
+   
+              - Length: 13-19 characters
+              - Format: numeric digits
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+       
+      <xs:element name="scheme" type="mpi:SchemeId" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              The schemeId for the pan. (configured scheme i.e. Visa, MasterCard, JCB, American Express, Diners...)
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="expiry" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Expiration Date supplied to merchant by cardholder (YYMM).
+   
+              - Length: 4 characters
+              - Format: numeric digits
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="Browser">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          The element containing browser related data.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="accept" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              The exact content of the HTTP accept sent to the merchant from the cardholder's browser.
+   
+              - Length: 0-2048 characters
+              - Format: any characters
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="userAgent" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              The exact content of the HTTP accept sent to the merchant from the cardholder's browser.
+   
+              - Length: 0-256 characters
+              - Format: any characters
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="Purchase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          The element containing the purchase related data.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="amount" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Purchase amount in minor units of currency with all punctuation removed.
+   
+              - Length: 1-12 characters
+              - Format: numeric digits
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="currency" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              ISO 4217 three digit currency code.
+                             
+              - Length: 3 characters
+              - Format: numeric digits
+              - Value:  ISO 4217 three digit currency
+                        code, other than those listed in
+                        Table C-9 of the 3-D Secure protocol
+                        specification.
+ 
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+       
+      <xs:element name="exponent" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              ISO 4217 exponent.
+   
+              - Length: 1 character
+              - Format: numeric digit
+              - Value:  ISO 4217 exponent
+ 
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+       
+      <xs:element name="Recur" type="mpi:Recur" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Recurring payment option.
+               
+              Required if the merchant and cardholder have agreed to recurring payments.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+       
+      <xs:element name="install" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              The maximum number of permitted authorizations for installment payments.
+               
+              - Length: 0-3 character
+              - Format: numeric digits
+              - Value:  must be > 1
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="description" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Brief description of items purchased.
+   
+              - Length: 0-125 characters
+              - Format: any characters
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="xid" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Transaction identifier determined by merchant or generated by 3DS Server if absent.
+              Can be 20 byte value UTF-8 encoded (not Base64 encoded) that will be Base64 encoded by the MPI,
+              giving a 28 byte result; or a 28 byte value resulting from Base64 encoding a 20 byte value
+              (this one will be used by the MPI as-is).
+   
+              - Length: 20 byte value UTF-8 encoded or,
+                        20 byte value Base64 encoded resulting in a 28 byte value or,
+                        20 byte value Hexadecimal encoded
+              - Format: any character
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="date" type="mpi:DateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Date and time of purchase.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="Merchant">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          The element containing the merchant related data.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="acquirerBin" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Acquiring institution identification code.
+   
+              - Length: 1-11 characters
+              - Format: numeric digits
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="password" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Merchant password provided by merchant's acquirer.
+   
+              - Length: 8 characters
+              - Format: alphanumeric
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="countryCode" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              ISO 3166 three digit country code.
+   
+              - Length: 3 characters
+              - Format: numeric digits
+              - Value:  ISO 3166 three digit country
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="id" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Acquirer-defined merchant identifier.
+   
+              - Length: 1-24 characters
+              - Format: any characters
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="name" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Merchant name to be displayed on Authentication Request Page.
+   
+              - Length: 1-25 characters
+              - Format: any characters
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+ 
+      <xs:element name="url" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Fully qualified URL of merchant Web site or customer care site (http(s)://domainname/...).
+   
+              - Length: 1-2048 characters
+              - Format: any characters
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+   
+  <xs:complexType name="Recur">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Recurring payment.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="frequency" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[ 
+              Indicates the minimum number of days between authorizations.
+             
+              - Length: 0-4 characters
+              - Format: numeric digits
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endRecur" type="mpi:Date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              The date after which no further authorizations should be performed.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+ 
+  <xs:simpleType name="Date">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+            Date and time expressed in GMT.
+             
+            - Length: 8 characters
+            - Format: YYYYMMDD where:
+             
+              - YYYY = 4 numeric digits
+              - MM = 2 numeric digits with value 01-12
+              - DD = 2 numeric digits with value 01-31
+          ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+   
+  <xs:simpleType name="DateTime">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+            Date and time expressed in GMT.
+             
+            - Length: 17 characters
+            - Format: YYYYMMDD HH:MM:SS where:
+             
+              - YYYY = 4 numeric digits
+              - MM = 2 numeric digits with value 01-12
+              - DD = 2 numeric digits with value 01-31
+              - a single space follows the date
+              - HH = 2 numeric digits with value 00 24, followed by a colon (":")
+              - MM = 2 numeric digits with value 00 59, followed by a colon (":")
+              - SS = 2 numeric digits with value 00 59
+          ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+   
+  <xs:simpleType name="SchemeId">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Payment schemes.
+           
+          - One of the following values:
+           
+            - Visa
+            - MasterCard
+            - American Express
+            - JCB
+            - Diners
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+ 
+  <xs:simpleType name="SessionId">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Correlation id between Verify Enrollment and Payer Authentication processes.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+</xs:schema>

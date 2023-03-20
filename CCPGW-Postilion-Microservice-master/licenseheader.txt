@@ -1,0 +1,15 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}***************************************************************
+${licensePrefix}Truteq Credit Card Payment Gateway (CCPGW) version 1.0.0
+${licensePrefix}***************************************************************
+${licensePrefix}Copyright (c) ${date?date?string("yyyy")} Truteq Australia 2019
+${licensePrefix}***************************************************************
+${licensePrefix}CCPGW Transaction Manager Microservice : Transaction Manager - Restful Web service 
+${licensePrefix}Support: Grant O'Reilly gbo@truteq.com
+${licensePrefix}V01.00.00  14-Apr-2021 
+${licensePrefix}***************************************************************
+<#if licenseLast??>
+${licenseLast}
+</#if> 

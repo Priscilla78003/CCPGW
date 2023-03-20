@@ -1,0 +1,43 @@
+Created Container
+~~~~~~~~~~~~~~~~~
+sh buildContainer.sh
+ 
+ 
+After the container is created
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+docker save microservice-ccpgw-communication-server-1.1.0 | gzip > microservice-ccpgw-communication-server-11.0.tar.gz
+
+scp microservice-ccpgw-communication-server-1.1.0.tar.gz gbo@hank.truteq.com:/home/gbo/ccpgw
+
+scp microservice-ccpgw-communication-server-1.1.0.tar.gz ipgw@10.160.12.81:/home/ipgw/CCPGW-Docker-Images
+
+
+From Home
+~~~~~~~~~
+scp microservice-ccpgw-communication-server-1.0.0.tar.gz gbo@hank.truteq.com:/home/gbo/ccpgw
+
+scp microservice-ccpgw-communication-server-1.0.0.tar.gz ipgw@10.160.12.81:/home/ipgw/CCPGW-Docker-Images
+
+Port forward to Sandbox:
+ssh -A -t -l gbo nemo.truteq.com -L 22222:localhost:22222 ssh -A -t -b 192.168.224.1 -l truteq SNDBXJB0101 -L 22222:localhost:22222 ssh -A -t -l ipgw 10.170.1.57 -L 22222:localhost:222
+
+scp microservice-ccpgw-communication-server-1.0.0.tar.gz ipgw@10.160.12.82:/home/ipgw/IPGW-Docker-Images
+scp microservice-ccpgw-communication-server-1.0.0.tar.gz ipgw@10.160.12.81:/home/ipgw/CCPGW-Docker-Images
+
+ 
+docker save microservice-ccpgw-communication-server-1.0.0 | gzip > microservice-ccpgw-postilion-rest-1.6.0.tarr.gz
+
+
+
+
+
+ssh -A -t -l gbo nemo.truteq.com -L 22222:localhost:22222 ssh -A -t -b 192.168.224.1 -l ipgw 10.160.12.82 -L 22222:localhost:222
+
+ssh -A -t -l gbo hank.truteq.com -L 22222:localhost:22222 ssh -A -t -b 192.168.224.1 -l truteq SNDBXJB0101 -L 22222:localhost:22222 ssh -A -t -l ipgw 10.170.1.57 -L 22222:localhost:222
+
+ssh -A -t -l gbo hank.truteq.com -L 22222:localhost:22222 ssh -A -t -b 192.168.224.1 -l ipgw 10.160.12.81 -l -L 22222:localhost:222
+
+ssh -A -t -l gbo hank.truteq.com -L 22222:localhost:22222 ssh -A -t -l ipgw 10.160.12.81 -l -L 22222:localhost:222
+
+rsync -avzh -e ssh --progress microservice-ccpgw-communication-server-1.0.1.tar.gz PMDIPGAPP0301:/home/ipgw/CCPGW-Docker-Images/

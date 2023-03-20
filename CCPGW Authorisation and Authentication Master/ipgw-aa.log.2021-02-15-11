@@ -1,0 +1,160 @@
+2021-02-15 11:00:33 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:33 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 1DE8B15AB2E5C19751B4E6B2AADF47D6
+2021-02-15 11:00:33 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:33 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:33 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:33 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 796AE1FB1D9F12DAC82B47A5473D8362
+2021-02-15 11:00:33 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:33 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:34 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:34 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: D6A32B44FAEB11BFB69A1EA9E22C8F72
+2021-02-15 11:00:34 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:34 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:35 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:35 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 43884C3D5A113CC87800212718E095FF
+2021-02-15 11:00:35 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:35 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:36 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:36 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: D60035330556F53C601EBEBAAD9BDFFD
+2021-02-15 11:00:36 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:36 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:37 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:37 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 22D1EAE7131489A09A19082928FBEEAF
+2021-02-15 11:00:37 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:37 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:38 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:38 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: AF5026A732166B8ECF6C5641653F6022
+2021-02-15 11:00:38 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:38 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:39 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:39 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: B13FB1919276BDF1592854E158B017A8
+2021-02-15 11:00:39 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:39 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:40 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:40 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 61F332F35550BCD7A40865B7948599C6
+2021-02-15 11:00:40 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:40 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:41 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:41 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 2CEBE27AFDCBC5DD1228330DFE627D6D
+2021-02-15 11:00:41 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:41 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:42 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:42 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: B3D0DE1A5167615D27CF1B452EDFE7B0
+2021-02-15 11:00:42 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:42 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:43 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:43 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 41289FEB176B6F3AEAEA57C03C58BA15
+2021-02-15 11:00:43 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:43 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:44 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:44 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: E364A86A6E7AD9ED58551A4567F06DAC
+2021-02-15 11:00:44 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:44 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:45 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:45 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: C3282DBAD1B4F0CF5BDA69B75F191859
+2021-02-15 11:00:45 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:45 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:46 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:46 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 6E087872730068781F5580F1524631FC
+2021-02-15 11:00:46 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:46 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:47 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:47 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: DE576D82E4A5C04AB283D2DA745DC4CC
+2021-02-15 11:00:47 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:47 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:48 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:48 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 77EC4AE40BC67D690C762D8426C2ECC9
+2021-02-15 11:00:48 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:48 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:49 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 11:00:49 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: C55CEA61A1BDB87C8B3C5892FC5CE163
+2021-02-15 11:00:49 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:00:49 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:00:49 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"Session for CIF: John.Doe@test.com has been removeded."}
+2021-02-15 11:22:55 INFO  MicroServiceHandler:188 -Response:{"status":201,"comments":"Successful!","data":"User: John.Doe@test.com connected."}
+2021-02-15 11:23:08 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":""}
+2021-02-15 11:23:08 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:23:08 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: A26EC85957E091EE5C7E9A237D1AF17B
+2021-02-15 11:23:08 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:23:08 INFO  MicroServiceHandler:188 -Response:[]
+2021-02-15 11:23:08 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:23:08 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 68C2D70C80A97311AF0878448624C5C6
+2021-02-15 11:23:08 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:23:08 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"TestBusiness"}
+2021-02-15 11:23:08 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:23:08 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 2FA7CE26F06D153ADD750CB28A962DCD
+2021-02-15 11:23:08 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:23:08 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:37 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:37 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: F28D2B583804409D7AF3B01632B4C3D9
+2021-02-15 11:29:37 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:37 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:37 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 71079951CB91AF29AA1CC445CE74DCA6
+2021-02-15 11:29:37 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:37 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:37 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:38 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:38 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 8B83FDF9C81266216559ADD713107BD4
+2021-02-15 11:29:38 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:38 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:39 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:39 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: E15087694BC783D7C7978F7F5A0DB013
+2021-02-15 11:29:39 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:39 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:40 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:40 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 29E2B7D1D696F92812C758EB162EB76E
+2021-02-15 11:29:40 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:40 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:41 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:41 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 75FE002E270D356C33A67E008B0C0ABC
+2021-02-15 11:29:41 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:41 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:42 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:42 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 37BA05BEAC61CEBD8ED4A775E9739578
+2021-02-15 11:29:42 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:42 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:43 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:43 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 9975AC86F209F9001D4C4D3DDE05F472
+2021-02-15 11:29:43 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:43 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:44 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:44 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: EB07ACE934650A5EC1BEC748D321706C
+2021-02-15 11:29:44 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:44 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:45 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:45 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 43AE49131827C4310463299213AFDFA6
+2021-02-15 11:29:45 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:45 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:46 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:46 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: B4691E291DBF13CE3E33507E059AADE1
+2021-02-15 11:29:46 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:46 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:47 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:47 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 9176B16959763C9B56F98829C9369310
+2021-02-15 11:29:47 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:47 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:48 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:48 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 7BDAE2147C5EF762467D5DFFEC9BFE22
+2021-02-15 11:29:48 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:48 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:49 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:49 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: D0794E2ABF4A311F47F1879C47BF0ECE
+2021-02-15 11:29:49 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:49 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:50 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:50 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 3C23DABAEBFA31761554D2DC3D3A1578
+2021-02-15 11:29:50 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:50 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:51 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:51 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 5CF9A870A53428DF606953F51E06741E
+2021-02-15 11:29:51 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:51 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:52 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:52 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: A1B530969938DCD0788734AA7720FC28
+2021-02-15 11:29:52 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:52 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]
+2021-02-15 11:29:53 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"11fec081-07b4-4730-a52e-9133a79e0489\",\"datetimestring\":\"2021-02-15 01:22:55.0\"}"}
+2021-02-15 11:29:53 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: A1231F88B1A8A05E0EE36468C8AE6169
+2021-02-15 11:29:53 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 11:29:53 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"Session for CIF: John.Doe@test.com has been removeded."}
+2021-02-15 11:29:53 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]

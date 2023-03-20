@@ -1,0 +1,19 @@
+2022-01-24 15:05:05 INFO  MicroServiceHandler:134 -Duration: 56
+2022-01-24 15:10:06 INFO  MicroServiceHandler:190 -POST request did not work.
+2022-01-24 15:10:30 INFO  MicroServiceHandler:134 -Duration: 23
+2022-01-24 15:12:27 INFO  MicroServiceHandler:134 -Duration: 141
+2022-01-24 15:43:01 INFO  MicroServiceHandler:134 -Duration: 19
+2022-01-24 15:43:04 INFO  MicroServiceHandler:188 -Response:
+2022-01-24 15:43:08 INFO  MicroServiceHandler:134 -Duration: 26
+2022-01-24 15:43:13 INFO  MicroServiceHandler:188 -Response:
+2022-01-24 15:43:33 INFO  MicroServiceHandler:134 -Duration: 50
+2022-01-24 15:43:53 INFO  MicroServiceHandler:134 -Duration: 71
+2022-01-24 15:52:21 INFO  MicroServiceHandler:134 -Duration: 21
+2022-01-24 15:53:22 INFO  MicroServiceHandler:134 -Duration: 83
+2022-01-24 15:57:31 INFO  MicroServiceHandler:190 -POST request did not work.
+2022-01-24 15:58:11 INFO  MicroServiceHandler:134 -Duration: 40
+2022-01-24 15:58:11 INFO  MicroServiceHandler:190 -POST request did not work.
+2022-01-24 15:58:16 INFO  MicroServiceHandler:134 -Duration: 45
+2022-01-24 15:58:16 INFO  MicroServiceHandler:190 -POST request did not work.
+2022-01-24 15:58:46 INFO  MicroServiceHandler:134 -Duration: 76
+2022-01-24 15:58:46 INFO  MicroServiceHandler:190 -POST request did not work.

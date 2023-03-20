@@ -1,0 +1,59 @@
+server.port=9078
+
+spring.datasource.driver.class.name=org.mariadb.jdbc.Driver
+spring.datasource.url=jdbc:mariadb://10.160.12.81:63306/ccpgwtransactdb?trustServerCertificate=true&useSSL=true&requireSSL=true
+#spring.datasource.url=jdbc:mariadb://localhost:63306/ccpgwtransactdb?trustServerCertificate=true&useSSL=true&requireSSL=true
+
+#spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+#spring.datasource.url=jdbc:mariadb://localhost:53306/ccpgwtransactdb?trustServerCertificate=true&useSSL=true&requireSSL=true
+#spring.datasource.username=secure_ccpgwuser
+#spring.datasource.password=53cur3u53r
+#spring.datasource.username=ENC(rbV/miF+VJa4kxgb5E/Stqp5fwhlxsasezL2eno+Y3wEVtjO2MBG5pexvpqdUUij1bSLOp/o1O5TRZFebBuqBQ==)
+#spring.datasource.password=ENC(zrPXX/uAWurjJuiP6u4vZ9M534OjUyDiebLEecjFC7U48YRWVk14IG+p9wQupg/t)
+#jasypt.encryptor.password=adm1nttpp
+
+#10 minutes wait time
+spring.datasource.hikari.maxLifeTime=600000
+
+#SSL setup
+#server.ssl.key-store-type=PKCS12
+#server.ssl.key-store=config/keystore/platformpac.p12
+#server.ssl.key-store-password=Pl@tf0rmP@c
+#trust.store=config/keystore/platformpac.p12
+#trust-store-password=Pl@tf0rmP@c
+
+
+#server.ssl.enabled=true
+#server.ssl.key-store-type=PKCS12
+#server.ssl.key-alias=platformpac
+#server.ssl.key-password=Pl@tf0rmp@c
+#server.ssl.key-store-password=Pl@tf0rmp@c
+#server.ssl.key-store=config/keystore/platformpac.p12
+#server.ssl.key-store-provider=SUN
+
+# The format used for the keystore
+server.ssl.key-store-type=PKCS12
+# The path to the keystore containing the certificate
+server.ssl.key-store=config/keystore/keyStore.p12
+# The password used to generate the certificate
+server.ssl.key-store-password=changeit
+
+
+# Trust store that holds SSL certificates.
+trust-store=config/keystore/trustStore.jks
+# Password used to access the trust store.
+trust-store-password=changeit
+# Type of the trust store.
+trust-store-type=JKS
+# Whether client authentication is wanted ("want") or needed ("need").
+#server.ssl.client-auth=need
+
+#trust.store.password=Pl@tf0rmp@c
+
+
+
+certificate.keystore=/home/grant/Truteq-Gogs-Server-Repo/CCPGW-Postilion-Microservice/ccpgw-transaction-manager-microservice/certificates/a93e6455-3ffc-498d-9d64-84fa22dc7095/mycerts.p12
+#certificate.keystore=/home/mho/platformpac/CREDITCARD-CODE/GRANT-202107071556/CCPGW-Postilion-Microservice/ccpgw-transaction-manager-microservice/config/keystore/mycerts.p12
+netcetera.create.pareq=https://3dss.prev.netcetera-payment.ch/3ds-server/mpi/v1/createPaReqIfEnrolled
+netcetera.validate.paresponse=https://3dss.prev.netcetera-payment.ch/3ds-server/mpi/v1/validatePaRes
+debug=true

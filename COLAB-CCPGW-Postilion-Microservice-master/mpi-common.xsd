@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="unqualified" attributeFormDefault="unqualified" targetNamespace="http://mpi.netcetera.com/common">
+ 
+  <xs:complexType name="ErrorDetails">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          The potential Error result returned to the Merchant after Payer Authentication Process.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="code" type="xs:string" use="required" />
+    <xs:attribute name="element" type="xs:string" use="optional" />
+  </xs:complexType>
+ 
+</xs:schema> 

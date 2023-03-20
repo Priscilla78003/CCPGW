@@ -1,0 +1,6 @@
+2021-02-18 17:03:01 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"3273429\",\"sessionid\":\"9c5c01cb-397f-471a-9ef3-49378ef4d5c5\",\"datetimestring\":\"2021-02-18 16:57:40.0\"}"}
+2021-02-18 17:03:01 INFO  IPGWAuthenticateAuthoriseMicroServiceEndUserController:108 -Session Id: AD52BB36AF84425F4D30AB5832F1C32A
+2021-02-18 17:03:01 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-18 17:03:01 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"Session for CIF: 3273429 has been removeded."}
+2021-02-18 17:03:01 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-02-18 17:03:01 INFO  MicroServiceHandler:188 -Response:{"status":600,"comments":"Error!","data":"No matching session active."}

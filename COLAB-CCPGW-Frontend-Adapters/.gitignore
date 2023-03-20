@@ -1,0 +1,6 @@
+/ccpgw-SOAP-frontend-adapter/target/
+/ccpgw-payment-gateway-adapter/target/
+/ccpgw-JSON-frontend-adapter/target/
+/ccpgw-SOAP-frontend-adapter/logs/
+/ccpgw-payment-gateway-adapter/logs/
+/ccpgw-JSON-frontend-adapter/logs/

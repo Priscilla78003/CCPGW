@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    
+    <groupId>com.truteq</groupId>
+    <artifactId>ccpgw-microservices</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>    
+
+    <name>PlatformPAC :: CCPGW :: ${project.artifactId} v${project.version}</name>
+    <modules>
+        <module>ccpgw-postilion-adapter</module>
+        <module>ccpgw-postilion-model</module>
+        <module>ccpgw-transaction-manager-microservice</module>
+        <module>ccpgw-transaction-notification-microservice</module>
+        <module>ccpgw-communication-server</module>
+        <module>ccpgw-comms-server-ws-async</module>
+        <module>ccpgw-logging-wrapper</module>
+        <module>ccpgw-acs-servlet</module>
+        <module>ccpgw-database-transaction-manager-microservice</module>
+        <module>ccpgw-google-totp</module>
+        <module>ccpgw-comms-server</module>
+    </modules>
+    
+    <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.17.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.17.1</version>
+        </dependency>
+    </dependencies>
+    </dependencyManagement>    
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+</project>

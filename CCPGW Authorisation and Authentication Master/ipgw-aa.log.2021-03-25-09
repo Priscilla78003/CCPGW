@@ -1,0 +1,16 @@
+2021-03-25 09:52:53 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-03-25 09:52:53 ERROR IPGWAuthenticateAuthoriseMicroserviceGuestController:271 -Exception: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2021-03-25 09:53:14 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-03-25 09:53:14 ERROR IPGWAuthenticateAuthoriseMicroserviceGuestController:271 -Exception: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2021-03-25 09:53:27 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-03-25 09:53:27 ERROR IPGWAuthenticateAuthoriseMicroserviceGuestController:271 -Exception: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2021-03-25 09:54:19 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-03-25 09:54:19 ERROR IPGWAuthenticateAuthoriseMicroserviceGuestController:271 -Exception: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2021-03-25 09:55:17 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-03-25 09:55:18 ERROR IPGWAuthenticateAuthoriseMicroserviceGuestController:271 -Exception: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2021-03-25 09:56:19 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-03-25 09:56:19 ERROR IPGWAuthenticateAuthoriseMicroserviceGuestController:271 -Exception: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2021-03-25 09:57:01 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-03-25 09:57:01 ERROR IPGWAuthenticateAuthoriseMicroserviceGuestController:271 -Exception: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2021-03-25 09:58:26 INFO  MicroServiceHandler:190 -POST request did not work.
+2021-03-25 09:58:26 ERROR IPGWAuthenticateAuthoriseMicroserviceGuestController:271 -Exception: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $

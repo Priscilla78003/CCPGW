@@ -1,0 +1,14 @@
+2021-02-15 10:55:11 INFO  MicroServiceHandler:188 -Response:{"status":201,"comments":"Successful!","data":"User: John.Doe@test.com connected."}
+2021-02-15 10:55:25 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":""}
+2021-02-15 10:55:26 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 10:55:26 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 3A7888857C72BD0DE4341C20F209E933
+2021-02-15 10:55:26 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 10:55:26 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 10:55:26 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: E73C902770B76A352846404340EB503E
+2021-02-15 10:55:26 INFO  MicroServiceHandler:188 -Response:[]
+2021-02-15 10:55:26 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 10:55:26 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"TestBusiness"}
+2021-02-15 10:55:26 INFO  MicroServiceHandler:188 -Response:{"status":200,"comments":"Successful!","data":"{\"cif\":\"John.Doe@test.com\",\"sessionid\":\"d1ef6684-cbd0-4259-b138-49aebf00c208\",\"datetimestring\":\"2021-02-15 00:55:11.0\"}"}
+2021-02-15 10:55:26 INFO  IPGWAuthenticateAuthoriseMerchantController:150 -Session Id: 3E00431C9BBBE9456F0382E67CC19E73
+2021-02-15 10:55:26 INFO  MicroServiceHandler:134 -Duration: 0
+2021-02-15 10:55:26 INFO  MicroServiceHandler:188 -Response:[{"bankname":"Westpac","typename":"CHEQUE","currname":"Australian Dollar","abbrev":"AUD","country":"Australia","username":"John.Doe@test.com","id":0,"name":"John Doe","number":"12349876267","creation_date":"Jan 12, 2021 5:28:38 AM","bank_id":0,"type_id":0,"customer_id":0}]

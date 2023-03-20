@@ -1,0 +1,14 @@
+ 
+grant@grant-T490:~/Truteq-Gogs-Server-Repo/IPGW-Adapters/ipgw-adapter-postilion-v2$ scp -r bin/* ipgw@10.160.12.81:~/sabre-postilion/adapter/
+
+
+
+From Home
+~~~~~~~~~
+First post forward to sandbox:
+
+(base) grant@grant-T490:~$ ssh -A -t -l gbo nemo.truteq.com -L 22222:localhost:22222 ssh -A -t -b 192.168.224.1 -l truteq SNDBXJB0101 -L 22222:localhost:22222 ssh -A -t -l ipgw 10.170.1.57 -L 22222:localhost:222
+
+scp -P 22222 ipgw-adapter-postilion-v2-1.0.0.jar ipgw@localhost:~/
+
+scp ipgw-adapter-postilion-v2-1.0.0.jar ipgw@10.160.12.81:~/sabre-postilion/adapter/

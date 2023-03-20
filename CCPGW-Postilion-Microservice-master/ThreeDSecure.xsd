@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+  elementFormDefault="unqualified" attributeFormDefault="unqualified">
+  <!-- This schema definition is created from Visa's DTD for 3-D Secure Messages, Version 1.0.2 -->
+ 
+  <xs:element name="ThreeDSecure" type="ThreeDSecureType" />
+ 
+  <xs:complexType name="ThreeDSecureType">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          3-D Secure message container.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Message" type="Message" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="Message">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          3-D Secure message.
+           
+          Contains protocol defined messages for VEReq, VERes, PAReq, PARes and Error.
+           
+          In addition to the ThreeDSecure protocol defined elements, 
+          this scheme allows any unknown child elements of Message to be unmarshalled into DOM nodes.
+           
+          This is done for two reasons:
+          - unmarshalling of Signature element, created when message is digitally signed
+          - unmarshalling of other unknown elements, sent by VISA CTH testing suite
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element ref="VEReq" />
+        <xs:element ref="VERes" />
+        <xs:element ref="PAReq" />
+        <xs:element ref="PARes" />
+        <xs:element name="Error" type="Error" />
+      </xs:choice>
+      <xs:any maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" use="required" type="xs:string" />
+  </xs:complexType>
+ 
+  <!-- Message types -->
+ 
+  <xs:element name="VEReq">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          <![CDATA[
+            Verify Enrollment Request.
+          ]]>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="version" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                3-D Secure protocol version identifier (should always be 1.0.2).
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="pan" type="xs:string" />
+        <xs:element name="Merchant" type="Merchant" />
+        <xs:element name="Browser" type="Browser" minOccurs="0" />
+        <xs:element name="Extension" type="xs:anyType" minOccurs="0" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                Message Extension: Requirements may emerge that cannot be supported by elements in the 3-D Secure messages;
+                any data necessary to support these requirements must be carried in a message extension.
+ 
+                Every extension is required to have an 'id' attribute and a 'critical' (true/false) attribute.
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="VERes">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          <![CDATA[
+            Verify Enrollment Response.
+          ]]>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="version" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                3-D Secure protocol version identifier (should always be 1.0.2).
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CH" type="CH" />
+        <xs:element name="url" type="xs:string" minOccurs="0" />
+        <xs:element name="protocol" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="IReq" type="IReq" minOccurs="0" />
+        <xs:element name="Extension" type="xs:anyType" minOccurs="0" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                Message Extension: Requirements may emerge that cannot be supported by elements in the 3-D Secure messages;
+                any data necessary to support these requirements must be carried in a message extension.
+ 
+                Every extension is required to have an 'id' attribute and a 'critical' (true/false) attribute.
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+   
+  <xs:element name="PAReq">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+        <![CDATA[Payer Authentication Request.]]>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="version" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+            <![CDATA[
+              3-D Secure protocol version identifier (should always be 1.0.2).
+            ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Merchant" type="Merchant" />
+        <xs:element name="Purchase" type="Purchase" />
+        <xs:element name="CH" type="CH" />
+        <xs:element name="Extension" type="xs:anyType" minOccurs="0" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                Message Extension: Requirements may emerge that cannot be supported by elements in the 3-D Secure messages;
+                any data necessary to support these requirements must be carried in a message extension.
+ 
+                Every extension is required to have an 'id' attribute and a 'critical' (true/false) attribute.
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="PARes">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+        <![CDATA[
+          Payer Authentication Response.
+        ]]>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="version" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+            <![CDATA[
+              3-D Secure protocol version identifier (should always be 1.0.2).
+            ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Merchant" type="Merchant" />
+        <xs:element name="Purchase" type="Purchase" />
+        <xs:element name="pan" type="xs:string" />
+        <xs:element name="TX" type="TX" />
+        <xs:element name="IReq" type="IReq" minOccurs="0" />
+        <xs:element name="Extension" type="xs:anyType" minOccurs="0" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>
+              <![CDATA[
+                Message Extension: Requirements may emerge that cannot be supported by elements in the 3-D Secure messages;
+                any data necessary to support these requirements must be carried in a message extension.
+ 
+                Every extension is required to have an 'id' attribute and a 'critical' (true/false) attribute.
+              ]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:complexType name="Error">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Error message.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="version" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              3-D Secure protocol version identifier (should always be 1.0.2).
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="errorCode" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Code indicating the problem identified in the message. Although there is a list of
+              predefined error codes that should be used, all components must accepts any value.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="errorMessage" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Text describing the problem identified in the message.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="errorDetail" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              May identify the specific data elements that caused the Error Code.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="vendorCode" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Error code (or explanatory text) to be used for trouble shooting.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <!-- Message components -->
+ 
+  <xs:complexType name="Browser">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Browser information.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="deviceCategory" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Indicates the type of device or channel being used for shopping.
+   
+              0: The client environment is
+              such that the full size messages (PAReq/PARes) will be used and the core protocol
+              specification governs. For
+              example, PC (HTML). (Default value; i.e. implied if not specified otherwise).
+   
+              1: The client is a constrained
+              device, such as WAP phone, where the condensed messages (CPRQ/CPRS) will be used and
+              the Extension for Mobile
+              Internet Devices must be followed.
+   
+              2: The client uses two-way messaging (SMS or USSD) and the
+              Extension for
+              Voice and Messaging Channels must be followed.
+   
+              3: The client uses the voice channel and the
+              Extension for
+              Voice and Messaging Channels must be followed.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="accept" type="xs:string" minOccurs="0" />
+      <xs:element name="userAgent" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="CH">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Cardholder information.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="enrolled" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+          <![CDATA[
+            3-D Secure enrollment status.
+   
+              Y: Authentication available
+   
+              N: Cardholder not participating
+   
+              U: or
+              Unable to authenticate
+          ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="acctID" type="xs:string" minOccurs="0" />
+      <xs:element name="expiry" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Year Month (YYMM).
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="IReq">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[Invalid request data.]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iReqCode" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Code indicating the problem identified in the message. Although there is a list of
+              predefined invalid-request codes that should be used, the MPI must accepts any value.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="iReqDetail" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              May provide supporting detail, such as the specific data elements that caused the Invalid Request Code.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="vendorCode" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[Error code (or explanatory text) to be used for trouble shooting.]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="Merchant">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Merchant information.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="acqBIN" type="xs:string" />
+      <xs:element name="merID" type="xs:string" />
+      <xs:element name="password" type="xs:string" minOccurs="0" />
+      <xs:element name="name" type="xs:string" minOccurs="0" />
+      <xs:element name="country" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              ISO 3166 three digit country code.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="url" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="Purchase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Purchase information.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="xid" type="xs:string" />
+      <xs:element name="date" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Date in the pattern: YYYYMMDD HH:MM:SS
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="amount" type="xs:string" minOccurs="0" />
+      <xs:element name="purchAmount" type="xs:string" />
+      <xs:element name="currency" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              ISO 4217 three digit currency code.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="exponent" type="xs:string" />
+      <xs:element name="desc" type="xs:string" minOccurs="0" />
+      <xs:element name="Recur" type="Recur" minOccurs="0" />
+      <xs:element name="install" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="Recur">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Recurring payment information.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="frequency" type="xs:string" />
+      <xs:element name="endRecur" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Date in the pattern: YYYYMMDD
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="TX">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[
+          Transaction information.
+        ]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="time" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Date in the pattern: YYYYMMDD HH:MM:SS
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="status" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Transaction status.
+       
+                Y: Authentication successful.
+       
+                N: Authentication failed.
+       
+                U: Authentication
+                could not be performed.
+       
+                A: Attempts processing performed.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="cavv" type="xs:string" minOccurs="0" />
+      <xs:element name="eci" type="xs:string" minOccurs="0" />
+      <xs:element name="cavvAlgorithm" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              Indicates the algorithm used to generate the Cardholder Authentication Verification Value.
+     
+                0: HMAC (as per SET TransStain) (no longer in use for version 1.0.2)
+     
+                1: CVV (no longer in use for version 1.0.2).
+     
+                2: CVV with ATN.
+     
+                3: MasterCard SPA algorithm.
+ 
+                4: AMEX algorithm.
+ 
+                7: Required for Use with EMV 3DS.
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema> 
